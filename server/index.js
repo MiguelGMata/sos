@@ -5,9 +5,13 @@ require('dotenv').config();
 const studiantRoutes = require('./src/routes/studentRoutes');
 const teacherRoutes = require('./src/routes/teacherRoutes');
 
-const cors = require('cors');
+const allowedOrigins = [
+'https://sos-six-phi.vercel.app/',
+    'http://localhost:3000', // Para el desarrollo local
+];
+
 app.use(cors({
-    origin: 'https://sos-six-phi.vercel.app/',
+    origin: allowedOrigins,
 }));
 
 const port = process.env.APP_PORT || 3000
