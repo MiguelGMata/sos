@@ -9,5 +9,6 @@ const apiClient = axios.create({
 
 export const getData = async() =>{
     const response = await apiClient.get('/');
-    return response.data.msg
+    console.log(response)
+    return response.data
 }
