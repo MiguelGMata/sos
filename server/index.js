@@ -7,7 +7,15 @@ const studiantRoutes = require('./src/routes/studentRoutes');
 const teacherRoutes = require('./src/routes/teacherRoutes');
 
 
-app.use(cors())
+// Configuración de CORS para permitir solo tu frontend
+const corsOptions = {
+    origin: 'https://sos-six-phi.vercel.app/', // Cambia esto a la URL de tu frontend en Vercel
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
+    credentials: true // Si necesitas manejar credenciales (opcional)
+};
+
+// Usa la configuración de CORS
+app.use(cors(corsOptions));
 app.use(
     bodyParser.urlencoded({
         extended: false
