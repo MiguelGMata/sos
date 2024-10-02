@@ -9,7 +9,10 @@ const teacherRoutes = require('./src/routes/teacherRoutes');
 
 // Configuración de CORS para permitir solo tu frontend
 const corsOptions = {
-    origin: 'https://sos-six-phi.vercel.app/', // Cambia esto a la URL de tu frontend en Vercel
+    origin: [
+        'http://localhost:5173', // Permitir el frontend en localhost
+        'https://sos-six-phi.vercel.app' // Permitir el frontend en producción
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
     credentials: true // Si necesitas manejar credenciales (opcional)
 };
