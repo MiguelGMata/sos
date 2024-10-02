@@ -1,0 +1,5 @@
+-Creamos carpeta
+-npm init -y: para crear package.json
+npm install:
+-express: permite configurar y gestionar un servidor de manera muy sencilla con servidores HTTP
+-cors: para identificar los dominios
