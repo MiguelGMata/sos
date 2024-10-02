@@ -1,18 +1,18 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
+const bodyParser = require('body-parser')
+const app = express();
 require('dotenv').config();
 const studiantRoutes = require('./src/routes/studentRoutes');
 const teacherRoutes = require('./src/routes/teacherRoutes');
 
-const allowedOrigins = [
-'https://sos-six-phi.vercel.app/',
-    'http://localhost:3000', // Para el desarrollo local
-];
 
-app.use(cors({
-    origin: allowedOrigins,
-}));
+app.use(cors())
+app.use(
+    bodyParser.urlencoded({
+        extended: false
+    })
+)
 
 const port = process.env.APP_PORT || 3000
 app.get('/', (req, res) => {
