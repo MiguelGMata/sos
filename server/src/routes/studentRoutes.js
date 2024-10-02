@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.route('/')
     .get((req, res) => {
-        res.json({msg: 'Student'})
+        res.json({msg: 'Student test production'})
     })
 
     .post((req, res) => {
