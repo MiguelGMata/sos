@@ -8,6 +8,6 @@ const apiClient = axios.create({
 })
 
 export const getData = async() =>{
-    const response = await apiClient.get('/student');
+    const response = await apiClient.get('/');
     return response.data.msg
 }
