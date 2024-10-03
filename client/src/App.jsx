@@ -20,6 +20,7 @@ function App() {
     <>
       <div>
         <h1>{count}</h1>
+        <p>------------separation------------</p>
         <h1>{dataTest}</h1>
       </div>
     </>
