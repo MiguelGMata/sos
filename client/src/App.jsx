@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='App'>
         <h1>{count}</h1>
         <p>------------separation------------</p>
         <h1>{dataTest}</h1>
