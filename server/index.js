@@ -26,7 +26,7 @@ app.use(
 
 const port = process.env.APP_PORT || 3000
 app.get('/', (req, res) => {
-    res.send('Bonjour a tous !')
+    res.send('Bonjour a tous et toutes !')
 })
 
 app.use('/api', apiRoutes);
