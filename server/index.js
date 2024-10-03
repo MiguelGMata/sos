@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const app = express();
 require('dotenv').config();
 const apiRoutes = require('./src/routes/apiRoutes');
-
+const port = process.env.APP_PORT || 3000
 
 // Configuración de CORS para permitir solo tu frontend
 const corsOptions = {
@@ -24,11 +24,9 @@ app.use(
     })
 )
 
-const port = process.env.APP_PORT || 3000
 app.get('/', (req, res) => {
     res.send('Bonjour a tous et toutes !')
 })
-
 app.use('/api', apiRoutes);
 
 app.listen(port, () =>{
