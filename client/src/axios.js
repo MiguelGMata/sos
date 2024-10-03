@@ -7,13 +7,6 @@ const apiClient = axios.create({
   }
 })
 
-export const getData = async() =>{
-    const response = await apiClient.get('/');
-    console.log(response,'<')
-    return response.data
-}
-
-
 export const getDataTest = async() =>{
   const response = await apiClient.get('/api/test');
   console.log(response,'<--')

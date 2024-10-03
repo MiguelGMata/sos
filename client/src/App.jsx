@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getData, getDataTest } from './axios'
+import { getDataTest } from './axios'
 import './App.css'
 
 function App() {
@@ -7,8 +7,6 @@ function App() {
   const [dataTest, setDataTest ] = useState() 
   useEffect(()=>{
     const fetchHome = async() =>{
-      const response = await getData();
-      setCount(response)
       const data = await getDataTest();
       setDataTest(data.msg)
       
@@ -19,7 +17,6 @@ function App() {
   return (
     <>
       <div className='App'>
-        <h1>{count}</h1>
         <p>------------separation------------</p>
         <h1>{dataTest}</h1>
       </div>
