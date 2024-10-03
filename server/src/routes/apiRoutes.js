@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.route('/')
+router.route('/test')
     .get((req, res) => {
-        res.json({msg: 'Student test production'})
+        res.json({msg: 'Route get test production'})
     })
 
     .post((req, res) => {

@@ -3,8 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser')
 const app = express();
 require('dotenv').config();
-const studiantRoutes = require('./src/routes/studentRoutes');
-const teacherRoutes = require('./src/routes/teacherRoutes');
+const apiRoutes = require('./src/routes/apiRoutes');
 
 
 // Configuración de CORS para permitir solo tu frontend
@@ -30,8 +29,7 @@ app.get('/', (req, res) => {
     res.send('Bonjour a tous ! test api')
 })
 
-app.use('/student', studiantRoutes);
-app.use('/teacher', teacherRoutes);
+app.use('/api', apiRoutes);
 
 app.listen(port, () =>{
     console.log(`server port: http://localhost:${port}`)
